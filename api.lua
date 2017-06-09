@@ -1,15 +1,15 @@
 local URL = require "socket.url"
 local https = require "ssl.https"
 local serpent = require "serpent"
-local json = (loadfile "/home/username/inline/JSON.lua")()
-local token = '254778917:AAEGVrvHjYc-wkwrMuF0hekpGHpmPr3htog' --token
+local json = (loadfile "/home/gssd/inline/JSON.lua")()
+local token = '394509436:AAHfAvyew01KJMy7PbcmU50HVCkV3clNuQM' --token
 local url = 'https://api.telegram.org/bot' .. token
 local offset = 0
 local redis = require('redis')
 local redis = redis.connect('127.0.0.1', 6379)
-local SUDO = 30410709
+local SUDO = 315017219
 function is_mod(chat,user)
-sudo = {30410709}
+sudo = {315017219}
   local var = false
   for v,_user in pairs(sudo) do
     if _user == user then
@@ -159,7 +159,7 @@ local function run()
           offset = msg.update_id + 1
           if msg.inline_query then
             local q = msg.inline_query
-						if q.from.id == 352689853 or q.from.id == 304107094 then
+						if q.from.id == 239465917 or q.from.id == 315017219 then
             if q.query:match('%d+') then
               local chat = '-'..q.query:match('%d+')
 							local function is_lock(chat,value)
